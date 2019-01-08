@@ -1,7 +1,11 @@
 const Comment = require('../models/Comment')
 
+
 const commentController = {
-    index: (req,res) => {
-        
+    create: (req, res) => {
+        commentController. create ({
+            title:req.params.commentItem,
+            createdDate:
+        })
     }
 }
