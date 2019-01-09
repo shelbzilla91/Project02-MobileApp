@@ -2,8 +2,11 @@ const express = require('express')
 const router = express.Router()
 const userController = require('../controllers/userController')
 
-
-router.get('/',)
+// User Routes
+router.get('/',userController.index)
+router.post ('/', userController.create )
+router.get ('/new', userController.new )
+router.get('/:id', userController.show)
 
 
 
