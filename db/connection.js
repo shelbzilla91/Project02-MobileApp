@@ -1,11 +1,11 @@
-// require('dotenv').config();
+require('dotenv').config();
 const mongoose = require("mongoose")
 
-mongoose.connect('mongodb://localhost/MobileApp').then(() => {
+mongoose.connect(process.env.MONGODB_URI).then(() => {
     console.log("MONGODB is now connected")
 })
 
 module.exports = mongoose;
 
-
+'mongodb://localhost/MobileApp'
 // process.env.MONGODB_URI)
