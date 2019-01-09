@@ -1,6 +1,5 @@
+// require('dotenv').config();
 const mongoose = require("mongoose")
-require('dotenv').config();
-
 
 mongoose.connect('mongodb://localhost/MobileApp').then(() => {
     console.log("MONGODB is now connected")
