@@ -1,5 +1,5 @@
 const mongoose = require('../db/connection')
-const recipeSchema = mongoose.Schema
+const Schema = mongoose.Schema
 
 const Recipes = new Schema({
     title: String,
@@ -9,8 +9,11 @@ const Recipes = new Schema({
     id:Number,
     allergy:String,
     genre:String,
-    user: Number,
-    discription: String
+    username: {
+        type: Schema.Types.String,
+        ref: "User"
+    },
+    description: String
 });
 
 module.exports = mongoose.model("Recipes", Recipes)
