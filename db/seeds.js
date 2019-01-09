@@ -1,8 +1,8 @@
-const user = require('../models/user')
+const User = require('../models/User')
 
 user.deleteMany({})
     .then(() => {
-        const newUser = user.create({
+        const newUser = User.create({
             username: 'shelbzilla91',
             firstName: 'Shelby',
             lastName:'Baker',

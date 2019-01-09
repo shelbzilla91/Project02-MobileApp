@@ -1,7 +1,7 @@
 const mongoose = require('../db/connection')
 const recipeSchema = mongoose.Schema
 
-const recipes = new Schema({
+const Recipes = new Schema({
     title: String,
     created: Date,
     instructions:String,
@@ -13,4 +13,4 @@ const recipes = new Schema({
     discription: String
 });
 
-module.exports = mongoose.model("Recipes", recipes)
+module.exports = mongoose.model("Recipes", Recipes)

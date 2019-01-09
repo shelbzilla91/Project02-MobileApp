@@ -1,9 +1,9 @@
-const user = require("../models/user")
+const User = require("../models/User")
 
 
 const userController = {
     index: (req, res) => {
-       user.find({}).then((returneduser)=>{
+       User.find({}).then((returneduser)=>{
         // user.find({}).then( users =>{
         //     res.render("user/index", {users: users})
     res.send(returneduser)}
