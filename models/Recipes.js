@@ -13,7 +13,11 @@ const Recipes = new Schema({
         type: Schema.Types.String,
         ref: "User"
     },
-    description: String
+    description: String,
+    comments: {
+        type: Schema.Types.String,
+        ref: "Comments"
+    },
 });
 
 module.exports = mongoose.model("Recipes", Recipes)
