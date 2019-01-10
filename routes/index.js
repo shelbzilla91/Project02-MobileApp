@@ -11,9 +11,9 @@ router.get('/:banana', userController.show)
 
 
 // Recipe Routes
-// router.get('/recipes',recipeController.index)
-// router.get ('/newrecipe', recipeController.new )
-// router.post ('/recipes', recipeController.create )
+router.get('/:id',recipeController.index)
+router.get ('/:id/newRecipe', recipeController.new )
+router.post ('/recipes/:userId', recipeController.create )
 // router.get('/:id', userController.show)
 
 

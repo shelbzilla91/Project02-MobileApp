@@ -20,7 +20,7 @@ const recipes = {
     "Add the chopped tomatoes, water, vinegar and spaghetti" + "Bring to a boil then simmer for 10 minutes until the pasta is cooked and the sauce has thickened" +
     "Stir in the chopped basil and add salt and pepper, to taste. Add the nutritional yeast" + "Serve and enjoy"
     ,
-    ingredients: [],
+    ingredients: ['tomatoes','pasta','basil','olive oil', 'garlic'],
     allergy:"tomatoes",
     genre:"Italian",
     username: "Shelby Baker",
@@ -58,4 +58,5 @@ Users.deleteMany().then(() => {
             })
         })
     })
+    console.log(users)
 })

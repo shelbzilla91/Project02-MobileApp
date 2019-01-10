@@ -28,7 +28,7 @@ const userController = {
     },
     show: (req,res) => {
         const userId = req.params.banana
-        User.findById(userId).then((userLink) =>{
+        User.findById(userId).populate({path:'recipes'}).then((userLink) =>{
             console.log(userLink)
             res.render('user/show', {userLink})
         })

@@ -1,1 +1,14 @@
 <p>this is the individual profile!</p>
+<a href="/{{userLink._id}}/newRecipe"> Make New Recipe!</a>
+<img src="{{userLink.img}}">
+
+{{#each userLink.recipes}}
+{{instructions}}
+{{#each ingredients}}
+<li>{{this}}</li>
+
+
+
+
+{{/each}}
+{{/each}}
