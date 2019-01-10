@@ -5,19 +5,15 @@ const Recipes = new Schema({
     title: String,
     created: Date,
     instructions:String,
-    ingredients:String,
+    ingredients:Array,
     id:Number,
     allergy:String,
     genre:String,
-    username: {
-        type: Schema.Types.String,
-        ref: "User"
-    },
     description: String,
-    comments: {
-        type: Schema.Types.String,
-        ref: "Comments"
-    },
+    comments: [{
+        type: Schema.Types.ObjectId,
+        ref: "Comment"
+    }],
 });
 
 module.exports = mongoose.model("Recipes", Recipes)

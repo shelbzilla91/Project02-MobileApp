@@ -1,4 +1,4 @@
-const User = require("../models/User")
+const Recipes = require("../models/Recipes")
 
 
 const recipeController = {
@@ -6,8 +6,10 @@ const recipeController = {
        Recipes.find({}).populate('recipes').then((recipes)=>{
             res.render("recipe/index", {recipes: recipes})
 
-            // users is what you call in the handlebars ETC.
-            
-        } )
 
+            
+       })
+    
+    }
+}
 module.exports = recipeController

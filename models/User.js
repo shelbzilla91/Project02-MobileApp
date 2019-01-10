@@ -8,6 +8,11 @@ const User = new Schema({
     password:String,
     email: String,
     img: String,
+    recipes: [{ 
+        type: Schema.Types.ObjectId,
+        ref: "Recipes"
+    } ],
+
 
 });
 

@@ -3,11 +3,11 @@ const User = require("../models/User")
 
 const userController = {
     index: (req, res) => {
-       User.find({}).then((users)=>{
+       User.find({}).populate('recipes').then((users)=>{
             res.render("user/index", {users: users})
 
             // users is what you call in the handlebars ETC.
-            
+
         } )
     },
     new:(req, res) => {
@@ -22,20 +22,17 @@ const userController = {
             password:req.body.password,
             email:req.body.email,
             img: req.body.img
-
-
-
         }).then( newUser => {
             res.redirect('/')
         })
     },
-    // show: (req,res) => {
-    //     const userId = req.params.id
-    //     user.findById(userId).then((userLink) =>{
-    //         console.log(userLink)
-    //         res.render('user/show', {userLink})
-    //     })
-    // },
+    show: (req,res) => {
+        const userId = req.params.banana
+        User.findById(userId).then((userLink) =>{
+            console.log(userLink)
+            res.render('user/show', {userLink})
+        })
+    }
     // edit:(req,res) => {
     //     const userId = req.params.id
     //     res.render ('user/edit', {userId})
