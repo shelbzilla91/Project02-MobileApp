@@ -1,3 +1,41 @@
 body {
     background: #11998e;
 }
+.card{
+    width: 600px;
+    height: 600px;
+    align-content: center;
+    align-items: center;
+
+}
+a{
+    font-family: 'Staatliches', cursive;
+    color:turquoise;
+    font-size: 30px;
+    
+}
+a:hover{
+    color:turquoise;
+
+}
+p{
+    color:white;
+    font-size: 15px;
+
+}
+.title{
+    font-family: 'Staatliches', cursive;
+    color:white;
+    font-size: 40px;
+}
+.is-4{
+ color:turquoise;
+
+}
+li{
+    color:white;
+    font-size: 15px;
+}
+h1{
+    color:turquoise; 
+}
