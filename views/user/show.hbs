@@ -4,6 +4,15 @@
 <figure class="image is-128x128">
   <img src="{{userLink.img}}">
 </figure>
+<p>{{userLink.username}}</p>
+<p>{{userLink.firstName}}</p>
+<p>{{userLink.lastName}}</p>
+<form action="/{{userLink._id}}?_method=DELETE" method="POST">
+        <button type="submit">Delete Profile</button>
+ </form>
+ 
+ <a href="/{{userLink._id}}/edit"><button type="submit">Edit Profile</button></a> 
+
 {{#each userLink.recipes}}
 <p>{{instructions}}</p>
 {{#each ingredients}}

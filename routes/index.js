@@ -8,6 +8,9 @@ router.get('/',userController.index)
 router.get('/new', userController.new )
 router.post('/', userController.create )
 router.get('/:banana', userController.show)
+router.get('/:banana/edit', userController.edit)
+router.patch('/:banana', userController.update)
+router.delete('/:id', userController.delete)
 
 
 // Recipe Routes
@@ -15,6 +18,8 @@ router.get('/:userId',recipeController.index)
 router.get ('/:userId/newRecipe', recipeController.new )
 router.post ('/:userId/recipes', recipeController.create )
 // router.get('/:id', userController.show)
+
+
 
 
 

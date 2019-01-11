@@ -32,11 +32,25 @@ const userController = {
             console.log(userLink)
             res.render('user/show', {userLink})
         })
+    },
+    edit:(req,res) => {
+        const userId = req.params.banana
+        res.render ('user/edit', {userId})
+    },
+    update:(req,res) =>{
+        const userId = req.params.banana
+        console.log(req.body)
+        User.findByIdAndUpdate(userId, req.body, {new: true}).then((user) => {
+            res.redirect(`/${userId}`)
+        })
+    },
+    delete:(req,res) =>{
+    const userId = req.params.id
+        User.findByIdAndRemove(userId).then(() => {
+            res.redirect('/')
+            console.log(userId)
+        })
     }
-    // edit:(req,res) => {
-    //     const userId = req.params.id
-    //     res.render ('user/edit', {userId})
-    // }
 }
     
         
