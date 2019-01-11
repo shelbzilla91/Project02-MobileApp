@@ -17,7 +17,13 @@ router.delete('/:id', userController.delete)
 router.get('/:userId',recipeController.index)
 router.get ('/:userId/newRecipe', recipeController.new )
 router.post ('/:userId/recipes', recipeController.create )
-// router.get('/:id', userController.show)
+
+
+// Comments
+router.get('/:userId',recipeController.index)
+// router.get ('/:userId/newRecipe', recipeController.new )
+// router.post ('/:userId/recipes', recipeController.create )
+
 
 
 
