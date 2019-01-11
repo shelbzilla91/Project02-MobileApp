@@ -8,6 +8,7 @@
 <p>{{userLink.username}}</p>
 <p>{{userLink.firstName}}</p>
 <p>{{userLink.lastName}}</p>
+<p>{{userLink.email}}</p>
 <form action="/{{userLink._id}}?_method=DELETE" method="POST">
         <button type="submit">Delete Profile</button>
  </form>
@@ -15,6 +16,8 @@
  <a href="/{{userLink._id}}/edit"><button type="submit">Edit Profile</button></a> 
 
 {{#each userLink.recipes}}
+<h1>{{title}}</h1>
+<p>{{description}}</p>
 <p>{{instructions}}</p>
 {{#each ingredients}}
 <li>{{this}}</li>

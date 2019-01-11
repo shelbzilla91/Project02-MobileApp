@@ -6,7 +6,7 @@ const commentController = {
         const recipes = req.params.id
         Comments.findById(recipes).populate('comments').then((recipes) => {
             const comments = recipes.comments
-            res.render('comments/index', { comments, recipes })
+            res.render('comments/index', { comments, comments })
         })
     },
     new: (req, res) => {
