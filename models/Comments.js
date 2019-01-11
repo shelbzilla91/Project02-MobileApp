@@ -3,8 +3,6 @@ const Schema = mongoose.Schema
 
 const Comments = new Schema({
     title: String,
-    created: Date,
-    user: Number,
     content: String
 });
 

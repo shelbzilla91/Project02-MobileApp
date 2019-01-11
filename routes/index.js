@@ -2,6 +2,8 @@ const express = require('express')
 const router = express.Router({mergeParams: true})
 const userController = require('../controllers/userController')
 const recipeController = require('../controllers/recipeController')
+const commentController = require('../controllers/commentController')
+
 
 // User Routes
 router.get('/',userController.index)
@@ -20,9 +22,9 @@ router.post ('/:userId/recipes', recipeController.create )
 
 
 // Comments
-router.get('/:userId',recipeController.index)
-// router.get ('/:userId/newRecipe', recipeController.new )
-// router.post ('/:userId/recipes', recipeController.create )
+router.get('/:userId',commentController.index)
+router.get ('/:userId/newcomment', commentController.new )
+router.post ('/:userId', commentController.create )
 
 
 

@@ -4,7 +4,7 @@ const Comment = require('../models/Comments')
 const commentController = {
     index: (req, res) => {
         const recipes = req.params.id
-        NewsLink.findById(recipes).populate('comments').then((recipes) => {
+        Comments.findById(recipes).populate('comments').then((recipes) => {
             const comments = recipes.comments
             res.render('comments/index', { comments, recipes })
         })
@@ -17,14 +17,18 @@ const commentController = {
         const recipes = req.params.id
         Comments.findById(recipes)
         .then((recipes) => {
-            Comment.create(req.body)
+            Comments.create(req.body)
             .then((comments) => {
                 recipes.comments.push(comments)
                 comments.save()
                 res.redirect(`/${recipes._id}/comments`)
                 
-            })
-        }
+        })
+        
+        })
+}
+}
+    
     
 
     
