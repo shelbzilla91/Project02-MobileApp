@@ -7,5 +7,5 @@ mongoose.connect(process.env.MONGODB_URI).then(() => {
 
 module.exports = mongoose;
 
-'mongodb://localhost/MobileApp'
+'mongosh "mongodb+srv://cluster0.ccali.mongodb.net/myFirstDatabase" --apiVersion 1 --username Shelby_Baker'
 // process.env.MONGODB_URI)
